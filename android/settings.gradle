@@ -1,0 +1,3 @@
+rootProject.name = 'SmartWaterMeter'
+
+include ':app'
