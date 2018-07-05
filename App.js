@@ -3,6 +3,8 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import reduxThunk from "redux-thunk";
 import reducers from "./src/reducers";
+import { Root } from "native-base";
+
 import { AppNavigator } from "./Navigation/AppNavigator";
 let composeEnhancers = compose;
 if (__DEV__) {
@@ -18,7 +20,9 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <AppNavigator />
+        <Root>
+          <AppNavigator />
+        </Root>
       </Provider>
     );
   }
